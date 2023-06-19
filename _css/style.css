@@ -1,0 +1,82 @@
+:root {
+	--primary-color: #DABAFB;
+	--primary-color-hover: #CDA9F1;
+}
+
+main {
+	min-height: 100vh;
+}
+
+.bg-primary {
+	background: var(--primary-color) !important;
+}
+
+.btn-primary {
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+	background-color: var(--primary-color-hover);
+	border-color: var(--primary-color-hover);
+}
+.btn-primary:active {
+	background-color: var(--primary-color-hover) !important;
+	border-color: var(--primary-color-hover) !important;
+}
+
+#add_article {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	text-align: right;
+}
+#add_article button {
+	border-radius: 50%;
+}
+
+
+.my-blur {
+	filter: blur(2px);
+}
+
+.my_modal {
+	height: 100vh;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	position: absolute;
+	top: 0;
+	z-index: 999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main_modale {
+	overflow: hidden;
+	width: 75%;
+	min-height: 35%;
+	background: white;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, .4);
+	position: relative;
+	border-radius: 10px;
+}
+
+.my_modal .header_modale {
+	border-bottom: thick double white;
+	position: relative;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: between;
+	align-items: center;
+	padding-left: 10px;
+}
+
+.main_modale .close_modale {
+	position: absolute;
+	right: 10px;
+	border-radius: 50%;
+	font-size: 1.2rem;
+}
+
