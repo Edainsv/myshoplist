@@ -40,7 +40,7 @@ main {
 	filter: blur(2px);
 }
 
-.my_modal {
+.my_modale {
 	height: 100vh;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.4);
@@ -62,7 +62,7 @@ main {
 	border-radius: 10px;
 }
 
-.my_modal .header_modale {
+.my_modale .header_modale {
 	border-bottom: thick double white;
 	position: relative;
 	width: 100%;

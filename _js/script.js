@@ -8,7 +8,6 @@ app.component('shop_list', {
 			shopList: {
 				articles: [
 					{
-						in_my_caddie: false,
 						name: 'Sachet de tomate',
 						quantity: 1,
 						prix_unit: 3
@@ -51,7 +50,7 @@ app.component('shop_list', {
 			this.shopList.total_price += quantity * price;
 		},
 		addShopItem: function () {
-			this.add_modale();
+			this.add_modale(this.shopList.articles);
 		}
 	},
 	template: `
