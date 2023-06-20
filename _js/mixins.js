@@ -1,6 +1,6 @@
 var myMixins = {
 	methods: {
-		add_modale: function (datas) {
+		add_modale: function (content) {
 			var modale = document.createElement('div');
 			document.querySelector('body').appendChild(modale);
 			document.querySelector('#app').classList.add('my-blur');
@@ -11,25 +11,27 @@ var myMixins = {
 			// Construct modale
 			var main_modale = document.createElement('div');
 			var header_modale = document.createElement('div');
+			var body_modale = document.createElement('div');
 			var p_title = document.createElement('p');
 			var i_close_modale = document.createElement('i');
 
 			main_modale.classList.add('main_modale');
 			header_modale.classList.add('header_modale', 'bg-primary');
+			body_modale.classList.add('body_modale');
 			p_title.classList.add('text-light', 'm-0');
 			p_title.innerText = 'Ajouter un article';
 			i_close_modale.classList.add('fa-solid', 'fa-xmark', 'close_modale', 'text-light');
 
 			main_modale.appendChild(header_modale);
+			main_modale.appendChild(body_modale);
 			header_modale.appendChild(p_title);
 			header_modale.appendChild(i_close_modale);
 			modale.appendChild(main_modale);
+			body_modale.innerHTML = content;
 
 			i_close_modale.addEventListener('click', () => {
 				this.close_modale(modale.id);
-			});
-
-			console.log(datas);
+			});			
 		},
 		close_modale(id) {
 			document.getElementById(id).remove();

@@ -24,6 +24,9 @@ app.component('shop_list', {
 					}
 				],
 				total_price: 0
+			},
+			test: {
+				name: 'Un nom'
 			}
 		}
 	},
@@ -50,7 +53,30 @@ app.component('shop_list', {
 			this.shopList.total_price += quantity * price;
 		},
 		addShopItem: function () {
-			this.add_modale(this.shopList.articles);
+			this.shopList.articles;
+
+			this.add_modale(`
+				<form action="#" methods="post">
+					<div class="form-group">
+						<label for="article_name">Nom de l'article</label>
+						<input id="article_name" type="text" class="form-control" v-model="test.name">
+					</div>
+
+					<div class="form-group mt-2">
+						<label for="article_name">Quantité</label>
+						<input id="article_name" type="number" min="1" class="form-control">
+					</div>
+
+					<div class="form-group mt-2">
+						<label for="article_name">Prix (&euro;)</label>
+						<input id="article_name" type="number" class="form-control">
+					</div>
+
+					<div class="text-center m-2">
+						<button id="btn-submit" type="submit" class="btn btn-primary mt-2">Ajouter</button>
+					</div>
+				</form>
+			`);
 		}
 	},
 	template: `
@@ -88,6 +114,7 @@ app.component('shop_list', {
 		</div>
 	`
 });
+
 
 
 app.mount('#app')

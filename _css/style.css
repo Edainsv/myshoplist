@@ -73,6 +73,10 @@ main {
 	padding-left: 10px;
 }
 
+.my_modale .body_modale {
+	padding: 5px 15px;
+}
+
 .main_modale .close_modale {
 	position: absolute;
 	right: 10px;
