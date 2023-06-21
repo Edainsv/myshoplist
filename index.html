@@ -15,17 +15,42 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-
-		<script type="text/javascript" src="_js/Vue.js"></script>
-		<script type="text/javascript" src="_js/mixins.js"></script>
 	</head>
 
 	<body>
-		<div id="app">
 			
-
+		<div id="app">
 			<main>
-				<shop_list></shop_list>
+				<table class="table text-center">
+					<thead>
+						<tr>
+							<td>#</td>
+							<td>Article</td>
+							<td>Quantité</td>
+							<td>Prix (&euro;)</td>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>0</td>
+							<td>name</td>
+							<td>quantity</td>
+							<td>prix_unit</td>
+						</tr>
+
+						<tr>
+							<td class="bg-light text-end" colspan="3">TOTAL</td>
+							<td class="bg-light">{{shopList.total_price}}</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div id="add_article" class="p-4">
+					<button class="btn btn-primary btn-lg" onclick="open_modale('form-add-shop-list');">
+						<i class="fa-solid fa-plus"></i>
+					</button>
+				</div>
 			</main>
 		</div>
 

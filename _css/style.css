@@ -3,9 +3,17 @@
 	--primary-color-hover: #CDA9F1;
 }
 
-main {
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body, #app {
+	width: 100%;
 	min-height: 100vh;
 }
+
 
 .bg-primary {
 	background: var(--primary-color) !important;
@@ -30,6 +38,7 @@ main {
 	position: fixed;
 	bottom: 0;
 	text-align: right;
+	z-index: 999;
 }
 #add_article button {
 	border-radius: 50%;
